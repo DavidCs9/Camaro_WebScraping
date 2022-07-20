@@ -26,7 +26,6 @@ for precio in precios:
     p = precio.getText().split()[0].strip("$").replace(",", "")
     lista_precios.append(p)
 
-
 a = soup.select(".price a")
 
 links = []
@@ -36,9 +35,6 @@ for link in a:
         links.append(f"https://www.soloautos.com.mx{href}")
     else:
         links.append(href)
-
-
-
 
 for car in range(len(lista_modelos)):
     data = {
